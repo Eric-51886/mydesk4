@@ -76,7 +76,9 @@ jobs:
           # - { target: aarch64-pc-windows-msvc, os: windows-2022, arch: aarch64 }
     steps:
       - name: Grant execute permission to all scripts
+		run: ls -l ./flutter/build_android_deps.sh;
         run: find . -name '*.sh' -exec chmod +x {} \;
+		run: ls -l ./flutter/build_android_deps.sh
       - name: Export GitHub Actions cache environment variables
         uses: actions/github-script@v6
         with:
